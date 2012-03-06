@@ -1,0 +1,14 @@
+useDynLib(phcfM)
+import(coda)
+
+export(demography,
+       deforestation,
+       inv.logit,
+       logit,
+       dinvgamma,
+       rinvgamma,
+       dwish,	
+       diwish,
+       rwish,
+       riwish)
+
