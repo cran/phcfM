@@ -2,15 +2,15 @@
 
 \alias{demography}
 
-\title{Gaussian mixed linear regression to model the population growth}
+\title{Gaussian mixed linear regression for modelling population growth}
 
-\description{The 'demography' function estimates the parameters of
+\description{The \code{demography()} function estimates the parameters of
   Gaussian linear mixed model in a hierarchical Bayesian framework. To
   estimate the posterior distribution of the parameters, block sampling
   is used by applying the algorithm 2 of Chib and Carlin (1999). The
   user supplies data and priors and a sample from the posterior
   distribution is returned as an MCMC object, which can be subsequently
-  analyzed with functions provided in the coda package.}
+  analyzed with functions provided in the \code{coda} package.}
 
 \usage{demography(fixed, random, group, data, burnin=1000, mcmc=10000,
 thin=10, verbose=1, seed=NA, beta.start=NA, sigma2.start=NA,
@@ -24,9 +24,8 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
     operators, on the right.}
   
   \item{random}{A one-sided formula of the form '~x1+...+xq' specifying
-    the model for the random effects part of the model, with the q
-    random terms, separated by '+' operators. If random=NULL, a fixed
-    effect model is fitted.}
+    the model for the random effects, with the q random terms, separated
+    by '+' operators. If random=NULL, a fixed effect model is fitted.}
   
   \item{group}{String indicating the name of the grouping variable
     in \code{data}, defining the hierarchical structure of the model.}
@@ -103,11 +102,12 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
 
 \details{
   
-  \code{demography} samples from the posterior distribution using the
-  blocked Gibbs sampler of Chib and Carlin (1999), Algorithm 2. The
-  simulation is done in compiled C++ code to maximize efficiency. Please
-  consult the \code{coda} documentation for a comprehensive list of
-  functions that can be used to analyze the posterior sample.
+  The \code{demography()} function samples from the posterior
+  distribution using the blocked Gibbs sampler of Chib and Carlin
+  (1999), Algorithm 2. The simulation is done in compiled C++ code to
+  maximize efficiency. Please consult the \code{coda} documentation for
+  a comprehensive list of functions that can be used to analyze the
+  posterior sample.
   
   The model takes the following form:
   \deqn{y_i = X_i \beta + W_i b_i + \varepsilon_i}{y_i = X_i * beta + W_i *
@@ -182,6 +182,8 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
 #========================================
 # Hierarchical Gaussian Linear Regression
 #========================================
+
+library(phcfM)
 
 #== Generating data
 

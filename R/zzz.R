@@ -2,10 +2,10 @@
 ## start-up and clean-up functions
 ##
 ## This software is distributed under the terms of the GNU GENERAL
-## PUBLIC LICENSE Version 2, June 1991.  See the package LICENSE
+## PUBLIC LICENSE Version 3, June 2007.  See the package LICENSE
 ## file for more information.
 ##
-## Copyright (C) 2011-present Ghislain Vieilledent
+## Copyright (C) 2012-present Ghislain Vieilledent
 ## 
 ##########################################################################
 

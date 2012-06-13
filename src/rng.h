@@ -1277,7 +1277,7 @@ namespace scythe {
           
         for (unsigned int i = 0; i < v; ++i) {
           alpha = C * rnorm(Sigma.rows(), 1, 0, 1);
-          A = A + (alpha * (t(alpha)));
+          A += (alpha * (t(alpha)));
         }
 
         return A;
@@ -1317,7 +1317,7 @@ namespace scythe {
         for (ait = alpha.begin_f(); ait != alast; ++ait) {
           *yit = rgamma(*ait, 1);
           ysum += *yit;
-          ++ait;
+          ++yit;
         }
 
         y /= ysum;

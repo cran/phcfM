@@ -4,7 +4,7 @@ phcfM R package
 `phcfM` is an R package for modelling anthropogenic deforestation. It
 was initially developed to obtain REDD baseline scenarios of
 deforestation for the *programme holistique de conservation des forêts
-à Madagascar* (from which the package was named after). It includes
+à Madagascar* (from which the package is named after). It includes
 two main functions:
 
 1. `demography()`, to model the population growth with time in a
@@ -19,9 +19,13 @@ between land-cover observations.
 Code and manual
 ---------------
 
-* Package source: [phcfM_1.0.tar.gz](http://sourceforge.net/projects/phcfm/files/phcfM_1.0.tar.gz/download)
-* Windows binary (R 2.14.2): [phcfM_1.0.zip](http://sourceforge.net/projects/phcfm/files/phcfM_1.0.zip/download)
-* Reference manual: [phcfM.pdf](http://sourceforge.net/projects/phcfm/files/phcfM.pdf/download)
+The last stable version of the `phcfM` R package (`phcfM_1.0`) is
+officially available for several operating systems (Unix, Windows and
+Mac OSX) on the Comprehensive R Archive Network ([CRAN](http://cran.r-project.org/web/packages/phcfM/index.html)).
+
+The source code and manual for the testing version (`phcfM_1.1`) is available here:
+* Package source: [phcfM_1.1.tar.gz](http://sourceforge.net/projects/phcfm/files/phcfM_1.1.tar.gz/download)
+* Reference manual: [phcfM_1.1.pdf](http://sourceforge.net/projects/phcfm/files/phcfM_1.1.pdf/download)
 
 Example
 -------

@@ -3,15 +3,15 @@
 \alias{deforestation}
 
 \title{Binary logistic regression with variable time-intervals between
-  observations to model the deforestation}
+  observations for modelling deforestation}
 
-\description{The 'deforestation' function estimates the parameters of a
+\description{The \code{deforestation()} function estimates the parameters of a
   Binary logistic regression model with variable time-intervals between
   observations in a hierarchical Bayesian framework. To estimate the
   posterior distribution of the parameters, an adaptive Metropolis
   algorithm is used. The user supplies data and priors and a sample
   from the posterior distribution is returned as an MCMC object, which
-  can be subsequently analyzed with functions provided in the coda
+  can be subsequently analyzed with functions provided in the \code{coda}
   package.}
   
 \usage{deforestation(formula, interval=1, data, burnin=1000, mcmc=1000,
@@ -82,7 +82,7 @@
 
   \item{deviance}{The posterior mean of the deviance \eqn{D}{D}, with
     \eqn{D=-2\log(\prod_i P(y_i|\theta_i))}{D=-2log(prod_i
-      P(y_i|theta_i))}.}
+      P(y_i|theta_i'))}.}
 
   \item{tune}{The optimized value for the tuning parameter. This value
   can be used for potential future runs.}
@@ -92,7 +92,7 @@
 \details{
   
   The \code{deforestation()} function estimates the parameters of a
-  logistic regression model with a variable time-interval between
+  logistic regression model with variable time-intervals between
   observations. The estimation is done in a hierarchical Bayesian
   framework using an adaptive Metropolis algorithm. Function is
   developped in C++ code using the Scythe statistical library (Pemstein
@@ -227,6 +227,6 @@ summary(model.glm)
 \keyword{hierarchical models}
 \keyword{glm}
 \keyword{logit}
-\keyword{Binomial}
+\keyword{Binary}
 \keyword{MCMC}
 \keyword{bayesian}
