@@ -20,14 +20,24 @@ framework. Markov chains Monte Carlo (MCMC) are coded in C++ using the
 Scythe statistical library to maximize computation efficiency.}
 
 \details{
-\tabular{ll}{
-  Package: \tab phcfM\cr
-  Type: \tab Package\cr
-  Version: \tab 1.1\cr
-  Date: \tab 2012-06-13\cr
-  License: \tab GPL-3 \cr
-  LazyLoad: \tab yes\cr
+  \tabular{ll}{
+    Package: \tab phcfM\cr
+    Type: \tab Package\cr
+    Version: \tab 1.1\cr
+    Date: \tab 2012-06-13\cr
+    License: \tab GPL-3 \cr
+    LazyLoad: \tab yes\cr
+  }
 }
+
+\references{
+  
+  Ghislain Vieilledent, Clovis Grinand and Romuald
+  Vaudry. 2013. Forecasting deforestation and carbon emissions in
+  tropical developing countries facing demographic expansion: a case
+  study in Madagascar. \emph{Ecology and Evolution}. DOI:
+  10.1002/ece3.550
+  
 }
 
 \author{

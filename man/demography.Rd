@@ -5,7 +5,7 @@
 \title{Gaussian mixed linear regression for modelling population growth}
 
 \description{The \code{demography()} function estimates the parameters of
-  Gaussian linear mixed model in a hierarchical Bayesian framework. To
+  a Gaussian linear mixed model in a hierarchical Bayesian framework. To
   estimate the posterior distribution of the parameters, block sampling
   is used by applying the algorithm 2 of Chib and Carlin (1999). The
   user supplies data and priors and a sample from the posterior
@@ -40,7 +40,7 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
     superior or equal to 100 so that the progress bar can be displayed.}
     
   \item{thin}{The thinning interval used in the simulation. The number of
-    MCMC iterations must be divisible by this value.}
+    Gibbs iterations must be divisible by this value.}
 
   \item{seed}{The seed for the random number generator. If NA, the
     Mersenne Twister generator is used with default seed 12345; if an
@@ -54,13 +54,13 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
   \item{beta.start}{The starting values for the \eqn{\beta}{beta}
     vector. This can either be a scalar or a p-length vector. The
     default value of NA will use the OLS \eqn{\beta}{beta} estimate of
-    the corresponding Gaussian Linear Regression without random
+    the corresponding Gaussian linear regression without random
     effects. If this is a scalar, that value will serve as the starting
-    value mean for all of the betas.}
+    value for all of the betas.}
 
   \item{sigma2.start}{Scalar for the starting value of the residual
     error variance. The default value of NA will use the OLS estimates
-    of the corresponding Gaussian Linear Regression without random
+    of the corresponding Gaussian linear regression without random
     effects.}
 
   \item{Vb.start}{The starting value for variance matrix of the random
@@ -81,12 +81,12 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
     
   \item{r}{The shape parameter for the Inverse-Wishart prior on variance
     matrix for the random effects. r must be superior or equal to
-    q. Set r=q for an uninformative prior. See the NOTE for more details}
+    q. Set r=q for an uninformative prior.}
     
   \item{R}{The scale matrix for the Inverse-Wishart prior on variance matrix
     for the random effects. This must be a square q-dimension
     matrix. Use plausible variance regarding random effects for the
-    diagonal of R. See the NOTE for more details}
+    diagonal of R.}
     
   \item{nu}{The shape parameter for the Inverse-Gamma prior on the
     residual error variance. Default value is \code{nu=delta=0.001} for
@@ -95,8 +95,6 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
   \item{delta}{The rate (1/scale) parameter for the Inverse-Gamma prior on the
     residual error variance. Default value is \code{nu=delta=0.001} for
     uninformative prior.}
-
-  \item{...}{further arguments to be passed}       
 
 }
 
@@ -166,7 +164,12 @@ Vb.start=NA, mubeta=0, Vbeta=1.0E6, r, R, nu=0.001, delta=0.001)}
   Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines. 2002.
   \emph{Output Analysis and Diagnostics for MCMC (CODA)}.
   \url{http://www-fis.iarc.fr/coda/}.
-}
+
+  Ghislain Vieilledent, Clovis Grinand and Romuald
+  Vaudry. 2013. Forecasting deforestation and carbon emissions in
+  tropical developing countries facing demographic expansion: a case
+  study in Madagascar. \emph{Ecology and Evolution}. DOI:
+  10.1002/ece3.550 }
 
 \author{
   Ghislain Vieilledent <ghislain.vieilledent@cirad.fr>

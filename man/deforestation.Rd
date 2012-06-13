@@ -21,14 +21,13 @@
 \arguments{
 
   \item{formula}{A two-sided linear formula of the form 'y~x1+...+xp'
-    describing the fixed-effects part of the model, with the response on
-    the left of a '~' operator and the p fixed terms, separated by '+'
-    operators, on the right. Response variable y must be 0 or 1
-    (Bernoulli trials).}
+    describing the model, with the response on the left of a '~'
+    operator and the p fixed terms, separated by '+' operators, on the
+    right. Response variable y must be 0 or 1 (Bernoulli trials).}
 
-  \item{interval}{A numeric scalar or vector of length equal to the
+  \item{interval}{A numeric scalar or a vector of length equal to the
     number of observations. \code{interval} specifies the time interval
-    between censuses for the observation of mortality. Default to 1.}
+    between land cover observations. Default to 1.}
   
   \item{data}{A data frame containing the variables of the model.}
 
@@ -40,7 +39,7 @@
     superior or equal to 100 so that the progress bar can be displayed.}
     
   \item{thin}{The thinning interval used in the simulation. The number of
-    MCMC iterations must be divisible by this value.}
+    Gibbs iterations must be divisible by this value.}
 
   \item{verbose}{A switch (0,1) which determines whether or not the
     progress of the sampler is printed to the screen. Default is 1: a
@@ -48,7 +47,7 @@
     Gibbs sampler.}
 
   \item{seed}{The seed for the random number generator. If NA, the
-    Mersenne Twister generator is used with default seed 12345; if an
+    Mersenne twister generator is used with default seed 12345; if an
     integer is passed it is used to seed the Mersenne twister.}
 
   \item{tune}{Metropolis tuning parameter. Must be a positive
@@ -58,9 +57,8 @@
   \item{beta.start}{The starting values for the \eqn{\beta}{beta}
     vector. This can either be a scalar or a p-length vector. The
     default value of NA will use the OLS \eqn{\beta}{beta} estimate of
-    the corresponding Gaussian Linear Regression without random
-    effects. If this is a scalar, that value will serve as the starting
-    value mean for all of the betas.}
+    the corresponding Binary logistic regression. If this is a scalar,
+    that value will serve as the starting value for all of the betas.}
 
   \item{mubeta}{The prior mean of \eqn{\beta}{beta}. This can either be
     a scalar or a p-length vector. If this takes a scalar value, then
@@ -68,7 +66,7 @@
     default value of 0 will use a vector of zeros for an uninformative
     prior.}
   
-  \item{Vbeta}{The prior variance of \eqn{\beta}{beta}.  This can either
+  \item{Vbeta}{The prior variance of \eqn{\beta}{beta}. This can either
     be a scalar or a square p-dimension matrix. If this takes a scalar value,
     then that value times an identity matrix serves as the prior
     variance of beta. Default value of 1.0E6 will use a diagonal matrix
@@ -118,7 +116,7 @@
   For the Metropolis algorithm, the proposal distribution is centered at
   the current value of \eqn{\beta}{beta} and has variance-covariance
   \eqn{V = T (V_{\beta}^{-1} + C^{-1})^{-1} T }{V = T (V_beta^(-1) +
-  C^(-1))^(-1) T}, where \eqn{T}{T} is a the diagonal positive definite
+  C^(-1))^(-1) T}, where \eqn{T}{T} is the diagonal positive definite
   matrix formed from the \code{tune}, \eqn{V_{\beta}}{V_beta} is the
   prior variance, and \eqn{C}{C} is the large sample variance-covariance
   matrix of the MLEs without considering the variation of the
@@ -135,6 +133,12 @@
   Martyn Plummer, Nicky Best, Kate Cowles, and Karen Vines. 2002.
   \emph{Output Analysis and Diagnostics for MCMC (CODA)}.
   \url{http://www-fis.iarc.fr/coda/}.
+
+  Ghislain Vieilledent, Clovis Grinand and Romuald
+  Vaudry. 2013. Forecasting deforestation and carbon emissions in
+  tropical developing countries facing demographic expansion: a case
+  study in Madagascar. \emph{Ecology and Evolution}. DOI:
+  10.1002/ece3.550
 }
 
 \author{

@@ -67,7 +67,6 @@ static double logLk(const Matrix<double>& Y, const Matrix<double>& X, const Matr
 static double logP(const Matrix<double>& beta, const Matrix<double>& mubeta, const Matrix<double>& Vbeta) {
     // Prior
     double log_P = 0.0;
-    double test = 0.0;
     if (det(Vbeta)>0.0) {
 	log_P = lndmvn(beta, mubeta, Vbeta);
     }
